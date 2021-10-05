@@ -10,6 +10,8 @@ namespace Week2MovieProject
     class MovieController
     {
         private readonly IList<Movie> movies;
+
+        private static int counter = 0;
         public MovieController() => movies = new List<Movie>();
 
         public void CreateMovie()
@@ -26,6 +28,8 @@ namespace Week2MovieProject
             string genre = Console.ReadLine();
 
             Movie newMovie = new Movie(title, duration, description, ageRating, genre);
+            newMovie.ID = counter;
+            counter++;
             movies.Add(newMovie);
             Console.WriteLine($"Created new movie {newMovie}");
 
@@ -37,6 +41,11 @@ namespace Week2MovieProject
             {
                 Console.WriteLine(movies);
             }
+        }
+
+        public void DeleteMovie(int index)
+        {
+            movies.RemoveAt(index);
         }
     }
 }

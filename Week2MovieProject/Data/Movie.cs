@@ -9,7 +9,10 @@ namespace Week2MovieProject.Data
     class Movie
     {
         // atribute getters and setters
-
+        public int ID
+        {
+            get; set;
+        }
         private string movieTitle;
 
         public string title
@@ -90,7 +93,10 @@ namespace Week2MovieProject.Data
             this.genre = movieGenre;
 
         }
-
+        public override string ToString()
+        {
+            return $"Movie[id={ID}, Title={title}], Genre={genre} ";
+        }
     }
 
 

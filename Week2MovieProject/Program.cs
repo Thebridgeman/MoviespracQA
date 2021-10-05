@@ -15,20 +15,43 @@ namespace Week2MovieProject
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             Console.WriteLine("1. Movies \n2. Quit");
             string input = Console.ReadLine();
 
-            switch (input)
+            // if statement based on input
+            // if movies
+            // start loop
+            // call crud movies
+            // ask if they want to continue
+            // yes -> continue
+            // no -> quit
+            // else quit
+
+            bool loop = true;
+
+            if (input == "1")
             {
-                case "1":
+                while (loop)
+                {
+
                     CrudMenu();
-                    break;
-                case "2":
-                    // quit out of loop
-                    break;
+
+                    Console.WriteLine("Do you want to continue? Y/N");
+                    string choice = Console.ReadLine();
+
+                    if (choice.ToUpper() == "N")
+                    {
+                        loop = false;
+
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
             }
+
 
         }
         public static void CrudMenu()
@@ -36,13 +59,11 @@ namespace Week2MovieProject
             MovieController controller = new MovieController();
 
             bool inMenu = true;
-            var values = Enum.GetValues(typeof(CrudOptions));
-            foreach (var value in values)
-            {
-                Console.WriteLine(value);
-            }
+
+
             while (inMenu)
             {
+                PrintMenu();
                 Console.Write("> ");
                 string input = Console.ReadLine();
                 // TryParse(stringInputToParse, ignoreCaseBoolean, outputVariable)
@@ -52,6 +73,10 @@ namespace Week2MovieProject
                     Console.WriteLine("Invalid Input");
                     continue;
                 }
+
+                //TRIED IF STATEMENT TO CONTINUE HERE BUT DIDNT WORK
+          
+
                 switch (crudInput)
                 {
                     case CrudOptions.CREATE:
@@ -64,12 +89,25 @@ namespace Week2MovieProject
                         break;
                     case CrudOptions.DELETE:
                         Console.WriteLine("Deleting");
-                      //  controller.ReadMovies();
+                        int index = int.Parse(Console.ReadLine());
+                        controller.DeleteMovie(index);
                         break;
                     case CrudOptions.QUIT:
                         inMenu = false;
                         break;
                 }
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
+            }
+        }
+
+        public static void PrintMenu()
+        {
+            Console.Clear();
+            var values = Enum.GetValues(typeof(CrudOptions));
+            foreach (var value in values)
+            {
+                Console.WriteLine(value);
             }
         }
 
