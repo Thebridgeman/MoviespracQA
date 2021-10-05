@@ -1,0 +1,16 @@
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\Week2MovieProject.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\Week2MovieProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\Week2MovieProject.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\Week2MovieProject.AssemblyInfo.cs
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\Week2MovieProject.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\bin\Debug\net5.0\Week2MovieProject.exe
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\bin\Debug\net5.0\Week2MovieProject.deps.json
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\bin\Debug\net5.0\Week2MovieProject.runtimeconfig.json
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\bin\Debug\net5.0\Week2MovieProject.runtimeconfig.dev.json
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\bin\Debug\net5.0\Week2MovieProject.dll
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\bin\Debug\net5.0\ref\Week2MovieProject.dll
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\bin\Debug\net5.0\Week2MovieProject.pdb
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\Week2MovieProject.dll
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\ref\Week2MovieProject.dll
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\Week2MovieProject.pdb
+C:\Users\Admin\Documents\Week2MovieProject\Week2MovieProject\obj\Debug\net5.0\Week2MovieProject.genruntimeconfig.cache
