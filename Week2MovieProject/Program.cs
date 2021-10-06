@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 
 
 namespace Week2MovieProject
@@ -17,6 +18,7 @@ namespace Week2MovieProject
 
     class Program
     {
+
         public enum CrudOptions
         {
             CREATE,
@@ -29,8 +31,28 @@ namespace Week2MovieProject
         {
             Menu m = new Menu();
             m.Draw();
+
             
+
             string input = Console.ReadLine();
+
+            MySqlConnection connection = MySqlUtils.GetConnection();
+
+            //opens the conection with the DB
+            connection.Open();
+
+            bool connectionOpen = connection.Ping();
+
+            //var schema = connection.GetSchema("Movies");
+            
+            MySqlUtils.RunSchema(Environment.CurrentDirectory + @"\Resources\Schema.sql", connection);
+
+            Console.WriteLine(@$"Connection status: {connection.State}
+             Ping successfull: {connectionOpen}
+             DB Version: {connection.ServerVersion}");
+
+            //closes the connection with the db
+             connection.Dispose();
 
 
             bool loop = true;
@@ -61,7 +83,10 @@ namespace Week2MovieProject
         }
         public static void CrudMenu()
         {
-            MovieController controller = new MovieController();
+            MovieController controller = new 
+                MovieController(
+                new MovieService(
+                    new MovieRepository(MySqlUtils.GetConnection())));
 
             bool inMenu = true;
 

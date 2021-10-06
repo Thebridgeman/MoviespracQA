@@ -93,6 +93,11 @@ namespace Week2MovieProject.Data
             this.genre = movieGenre;
 
         }
+
+        public Movie()
+        {
+        }
+
         public override string ToString()
         {
             return $"Movie[id={ID}, Title={title}], Genre={genre} ";
