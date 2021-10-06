@@ -3,6 +3,18 @@
 
 namespace Week2MovieProject
 {
+
+    class Menu : IDrawable
+    {
+        public void Draw()
+        {
+            Console.WriteLine("=== Menu ===");
+            Console.WriteLine("1. Movies");
+            Console.WriteLine("2. Quit");
+            Console.WriteLine("=== ==== ===");
+        }
+    }
+
     class Program
     {
         public enum CrudOptions
@@ -15,18 +27,11 @@ namespace Week2MovieProject
         }
         static void Main(string[] args)
         {
-
-            Console.WriteLine("1. Movies \n2. Quit");
+            Menu m = new Menu();
+            m.Draw();
+            
             string input = Console.ReadLine();
 
-            // if statement based on input
-            // if movies
-            // start loop
-            // call crud movies
-            // ask if they want to continue
-            // yes -> continue
-            // no -> quit
-            // else quit
 
             bool loop = true;
 
@@ -74,7 +79,7 @@ namespace Week2MovieProject
                     continue;
                 }
 
-                //TRIED IF STATEMENT TO CONTINUE HERE BUT DIDNT WORK
+                
           
 
                 switch (crudInput)
