@@ -40,6 +40,7 @@ namespace Week2MovieProject
             //    }
 
         }
+
     }
 
     class Program
@@ -63,6 +64,8 @@ namespace Week2MovieProject
             string input = Console.ReadLine();
 
             MySqlConnection connection = MySqlUtils.GetConnection();
+
+
 
             //opens the conection with the DB
             connection.Open();
@@ -130,8 +133,15 @@ namespace Week2MovieProject
                     continue;
                 }
 
-                
-          
+                //string s = "Hello world";
+                //s.Write(); // this extension method is only scope when the namespace is imported
+                //MovieRepository<Item, int> repo = new MovieRepository(MySqlUtils.GetConnection());
+                //repo.ReadById(32);
+
+                int i = 32;
+                Console.WriteLine(i.IsEven());
+                Console.WriteLine(i.IsOdd());
+
 
                 switch (crudInput)
                 {
