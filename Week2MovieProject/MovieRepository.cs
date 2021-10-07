@@ -25,7 +25,7 @@ namespace Week2MovieProject
             connection.Open();
 
             MySqlCommand command = connection.CreateCommand();
-            command.CommandText = $"INSERT INTO movies (name, description) VALUES('{toCreate.title}', {toCreate.description}  )";
+            command.CommandText = $"INSERT INTO movies (name, description) VALUES('{toCreate.title}', '{toCreate.description}')";
 
             command.ExecuteNonQuery();
             connection.Close();
@@ -37,7 +37,7 @@ namespace Week2MovieProject
             return movie;
         }
 
-        
+
 
         public IList<Movie> Read()
         {
@@ -61,7 +61,7 @@ namespace Week2MovieProject
 
             return movies;
         }
-        
+
         public bool Exists(int u)
         {
             MySqlCommand command = connection.CreateCommand();
@@ -85,6 +85,6 @@ namespace Week2MovieProject
             connection.Close();
 
         }
-     
+
     }
 }

@@ -13,6 +13,32 @@ namespace Week2MovieProject
             Console.WriteLine("1. Movies");
             Console.WriteLine("2. Quit");
             Console.WriteLine("=== ==== ===");
+
+            //        try
+            //        {
+            //            Console.WriteLine("Hello"); // do something that could throw an exception
+            //            DoSomething();
+            //        }
+            //        catch (Exception e)
+            //        {
+            //            Console.WriteLine("App continues executing");
+            //        }
+
+
+            //    }
+
+            //    public static void DoSomething()
+            //    {
+            //        Console.WriteLine("In do something");
+            //        DoSomethingElse();
+            //    }
+
+            //    public static void DoSomethingElse()
+            //    {
+            //        Console.WriteLine("In do something else");
+            //        throw new Exception("thrown an exception");
+            //    }
+
         }
     }
 
@@ -140,7 +166,6 @@ namespace Week2MovieProject
                 Console.WriteLine(value);
             }
         }
-
     }
-    }
+}
 
